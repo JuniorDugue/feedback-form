@@ -21,12 +21,14 @@ const Feedback = () => {
     buttonText,
   } = values;
 
-  const handleChange = () => {
-    console.log("handle change");
+  const handleChange = name => e  => {
+    setValues({ ...values, [name]: e.target.value})
   };
 
-  const handleSubmit = () => {
-    console.log("handle submits");
+  const handleSubmit = e => {
+    e.preventDefault()
+    setValues({ ...values, buttonText: "...sending"});
+    console.log({name, email, phone, message, uploadedFiles})
   };
 
   const FeedbackForm = () => (
