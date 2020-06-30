@@ -11,9 +11,6 @@ const Feedback = () => {
     uploadPhotosButtonText: "Upload files",
   });
 
-  // next we'll destructure, so we don't have to keep values.name, values.name, etc
-
-  // destructured state variables
   const {
     name,
     email,
@@ -24,7 +21,6 @@ const Feedback = () => {
     buttonText,
   } = values;
 
-  // event handler
   const handleChange = () => {
     console.log("handle change");
   };
@@ -46,8 +42,8 @@ const Feedback = () => {
           ></textarea>
         </div>
         <div className="form-group">
-            <label className="text-muted">Your Name</label>
-                <input type="text" onChange={handleChange('name')}/>
+          <label className="text-muted">Your Name</label>
+          <input type="text" onChange={handleChange("name")} />
         </div>
       </form>
     </>
